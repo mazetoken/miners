@@ -16,124 +16,124 @@ _You can restart your phone first_
 
 ### Go to Google Play Store and download UserLAnd app
 
-Install the app
+- Install the app
 
-Open the app and install Ubuntu
+- Open the app and install Ubuntu
 
-Setup your username and passwords
+- Setup your username and passwords
 
-Choose SSH
+- Choose SSH
 
 ### Run commands:
 
-`sudo apt-get update && sudo apt-get dist-upgrade`
+sudo apt-get update && sudo apt-get dist-upgrade
 
-`sudo apt-get install git`
+sudo apt-get install git
 
-`sudo apt-get install wget`
+sudo apt-get install wget
 
-`sudo apt-get install curl`
+sudo apt-get install curl
 
-`curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -`
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
-`sudo apt-get install - y nodejs`
+sudo apt-get install - y nodejs
 
-`sudo apt-get install gcc g++ make`
+sudo apt-get install gcc g++ make
 
-`sudo npm install -g npm@latest`
+sudo npm install -g npm@latest
 
-`sudo apt-get install nano`
+sudo apt-get install nano
 
-`sudo apt-get install zip unzip`
+sudo apt-get install zip unzip
 
 ### Create a new directory e.g. miner, download and unpack the selected miner:
 
-`mkdir miner`
+mkdir miner
 
-`cd miner`
+cd miner
 
-`wget https://github.com/mazetoken/miners/raw/master/maze-kasumi-bchd-miner.zip`
+wget https://github.com/mazetoken/miners/raw/master/maze-kasumi-bchd-miner.zip
 
-_You can also try other miners:_
+- _You can also try other miners:_
 
-_`wget https://github.com/mazetoken/miners/raw/master/maze-kasumi-JT-miner.zip`_
+_wget https://github.com/mazetoken/miners/raw/master/maze-kasumi-JT-miner.zip_
 
 or 
 
-_`wget https://github.com/mazetoken/miners/raw/master/maze-blue-miner.zip`_
+_wget https://github.com/mazetoken/miners/raw/master/maze-blue-miner.zip_
 
 or Mist miner
 
-_`wget https://github.com/mazetoken/miners/raw/master/mist-kasumi-bchd-miner.zip`_
+_wget https://github.com/mazetoken/miners/raw/master/mist-kasumi-bchd-miner.zip_
 
-`unzip maze-kasumi-bchd-miner.zip`
+unzip maze-kasumi-bchd-miner.zip
 
-_maze-kasumi-bchd-miner directory will be created (or unzip other miner you have downloaded)_
+- _maze-kasumi-bchd-miner directory will be created (or unzip other miner you have downloaded)_
 
 ### Download CMake to miner directory (because we need a new version of CMake for fastmine ; no need to do this for Blue's miner):
 
-`sudo apt install build-essential libssl-dev`
+sudo apt install build-essential libssl-dev
 
-`wget https://github.com/Kitware/CMake/releases/download/v3.16.5/cmake-3.16.5.tar.gz`
+wget https://github.com/Kitware/CMake/releases/download/v3.16.5/cmake-3.16.5.tar.gz
 
-`tar -zxvf cmake-3.16.5.tar.gz`
+tar -zxvf cmake-3.16.5.tar.gz
 
 ### Navigate to cmake directory:
 
-`cd cmake-3.16.5`
+cd cmake-3.16.5
 
 ### Run commands:
 
-_*unfortunately, it will take some time - about two hours, so be patient; You can change the sleep time of your phone's display to 30 minutes to make it a little faster; you can skip this if you don't want to mine with fastmine):_
+- _*unfortunately, it will take some time - about two hours, so be patient; You can change the sleep time of your phone's display to 30 minutes to make it a little faster; you can skip this if you don't want to mine with fastmine):_
 
-`./bootstrap`
+./bootstrap
 
-`make` 
+make 
 
-`sudo make install`
+sudo make install
 
 ### Navigate to maze-kasumi-bchd-miner directory (or other miner directory):
 
-`cd ..`
+cd ..
 
-`cd maze-kasumi-bchd-miner`
+cd maze-kasumi-bchd-miner
 
 ### Open .env in Nano editor:
 
-`sudo nano .env`
+sudo nano .env
 
-_Type/paste your WIF=" ..." (right click on your addres in Electron Cash wallet to get a private key)_
+- _Type/paste your WIF=" ..." (right click on your addres in Electron Cash wallet to get a private key)_
 
-_You can change your tag in MINER_UTF8="..."_
+- _You can change your tag in MINER_UTF8="..."_
 
-_You can change FASTMIE to "yes" (leave empty or type "no" if you don't want to mine with fastmine)
+- _You can change FASTMIE to "yes" (leave empty or type "no" if you don't want to mine with fastmine)
 and then tap ctrl O enter - to save changes and ctrl X enter - to exit editor_
 
 ### Navigate to fastmine directory and run cmake (you can skip this if you don't want to mine with fastmine):
 
-`cd fastmine`
+cd fastmine
 
-`cmake . && make`
+cmake . && make
 
 ### Navigate to maze-kasumi-bchd-miner (or other miner directory), install and start the miner:
 
-`cd ..`
+cd ..
 
-`npm i`
+npm i
 
 _Do not run npm audit fix !_
 
-`npm start`
+npm start
 
-_Tap Ctrl C (to stop the miner)_
+- _Tap Ctrl C (to stop the miner)_
 
-_Start miner again (if you have closed UserLAnd app):_
+- _Start miner again (if you have closed UserLAnd app):_
 
-`cd miner`
+cd miner
 
-`cd maze-kasumi-bchd-miner`
+cd maze-kasumi-bchd-miner
 
-`npm start`
+npm start
 
 ### Join [MAZE](https://t.me/mazemining) Telegram group
 
