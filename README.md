@@ -107,7 +107,8 @@ sudo nano .env
 - _You can change your tag in MINER_UTF8="..."_
 
 - _You can change FASTMIE to "yes" (leave empty or type "no" if you don't want to mine with fastmine)
-and then tap ctrl O enter - to save changes and ctrl X enter - to exit editor_
+
+- _Tap: ctrl O enter - to save changes and ctrl X enter - to exit editor_
 
 ### Navigate to fastmine directory and run cmake (you can skip this if you don't want to mine with fastmine):
 
