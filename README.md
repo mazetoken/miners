@@ -1,20 +1,80 @@
-### Tutorial how to mine MAZE SLP token on Android phone with Linux Ubuntu emulator
+## Tutorial how to mine MAZE SLP token on Windows or Android phone
 
-_v1.0 created by [B_S_Z](https://t.me/b_s_z)_
+_v2.0 created by [B_S_Z](https://t.me/b_s_z)_
 
 [MAZE](https://mazetoken.github.io) is based on [Mistcoin](https://mistcoin.org)
 
-We can use 3 different miners ([Kasumi's](https://mistcoin.org), [Kasumi's original version compiled by Blockparty-sh and team](https://github.com/blockparty-sh/mist-miner) and [Blue's miner](https://gitlab.com/blue_mist/miner))
+We can use 3 different miners ([Kasumi's](https://mistcoin.org), [Kasumi's original version compiled by Blockparty-sh and team](https://github.com/blockparty-sh/mist-miner) and [Blue's miner](https://gitlab.com/blue_mist/miner)). Browse code above for patched miners (e.g. BN error and unwanted BCH dust)
 
-Read [here](https://github.com/blockparty-sh/mist-miner) how to prepare your Electron Cash wallet (SLP edition) for mining
+_You wiil need to use a command line_
 
 _You can also mine Mist_
 
 _You can use a spare phone_
 
-_You can restart your phone first_
+### Prepare your Electron Cash SLP wallet for mining
 
-### Go to Google Play Store and download UserLAnd app
+- Download [Electron Cash SLP wallet](https://simpleledger.cash/project/electron-cash-slp-edition/)
+
+- Create two wallets in Electron Cash, e.g. wallet_1 (mining wallet) and wallet_2 (funding wallet)
+
+- Open wallet_2 (funding wallet) and send to this wallet some BCH, e.g. 0.00025000
+
+- Open wallet_1 (mining wallet), choose your address (this will be your mining address) and send to this address, from wallet_2, multiple 0.00001870 BCH in one transanction, e.g. paste in send tab pay to field: 
+
+simpleledger:yourminingaddress,0.00001870
+
+simpleledger:yourminingaddress,0.00001870
+
+simpleledger:yourminingaddress,0.00001870
+
+simpleledger:yourminingaddress,0.00001870
+
+simpleledger:yourminingaddress,0.00001870
+
+simpleledger:yourminingaddress,0.00001870
+
+simpleledger:yourminingaddress,0.00001870
+
+simpleledger:yourminingaddress,0.00001870
+
+simpleledger:yourminingaddress,0.00001870
+
+simpleledger:yourminingaddress,0.00001870
+
+_in BCH amount field you can type e.g. 0.00001000_
+
+- Right click on your mining address (in wallet_1) and get your private key (WIF)
+
+### Mining on Windows for beginners
+
+- Download and install [Nodejs](https://nodejs.org/en/)
+
+- Browse code above and choose the miner e.g. maze-kasumi-bchd-miner. Download and unzip the miner to drive C
+
+- Go to C://maze-kasumi-bchd-miner and open .env file (e.g. in notepad), paste your WIF and type "yes" in fastmine line. Save the file
+
+- Browse code above and download fastmine.zip file. Unzip and paste fastmine.exe to fastmine folder in maze-kasumi-bchd-miner
+
+- Open Windows PowerShell (Windows X) and type:
+
+cd ..
+
+cd  ..
+
+cd maze-kasumi-bchd-miner
+
+Run commands:
+
+npm i
+
+_Do not run npm audit fix !_
+
+npm start
+
+### Mining on Android phone
+
+Go to Google Play Store and download UserLAnd app
 
 - Install the app
 
@@ -138,6 +198,10 @@ npm start
 
 ### Join [MAZE](https://t.me/mazemining) Telegram group
 
+_Keep your mining wallet as clean as possible (use it for mining only)_
+
 _I will update this tutorial if I find bugs or improvements_
 
 Have fun
+
+_B_S_Z_
