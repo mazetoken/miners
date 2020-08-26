@@ -6,13 +6,13 @@ _v2.0 created by [B_S_Z](https://t.me/b_s_z)_
 
 We can use 3 different miners ([Kasumi's](https://mistcoin.org), [Kasumi's original version compiled by Blockparty-sh and team](https://github.com/blockparty-sh/mist-miner) and [Blue's miner](https://gitlab.com/blue_mist/miner)). You can also download pateched miners (e.g. BN error and unwanted BCH dust) from this repository
 
-_You wiil need to use a command line_
+_You will need to use a command line_
 
 _You can also mine Mist_
 
 _You can use a spare phone_
 
-### Prepare your Electron Cash SLP wallet for mining
+### Prepare your Electron Cash SLP desktop wallet for mining
 
 - Download [Electron Cash SLP wallet](https://simpleledger.cash/project/electron-cash-slp-edition/)
 
