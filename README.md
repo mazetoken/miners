@@ -4,7 +4,7 @@ _v2.0 created by [B_S_Z](https://t.me/b_s_z)_
 
 [MAZE](https://mazetoken.github.io) is based on [Mistcoin](https://mistcoin.org)
 
-We can use 3 different miners ([Kasumi's](https://mistcoin.org), [Kasumi's original version compiled by Blockparty-sh and team](https://github.com/blockparty-sh/mist-miner) and [Blue's miner](https://gitlab.com/blue_mist/miner)). Browse code above for patched miners (e.g. BN error and unwanted BCH dust)
+We can use 3 different miners ([Kasumi's](https://mistcoin.org), [Kasumi's original version compiled by Blockparty-sh and team](https://github.com/blockparty-sh/mist-miner) and [Blue's miner](https://gitlab.com/blue_mist/miner)). You can also download pateched miners (e.g. BN error and unwanted BCH dust) from this repository
 
 _You wiil need to use a command line_
 
@@ -50,11 +50,11 @@ _in BCH amount field you can type e.g. 0.00001000_
 
 - Download and install [Nodejs](https://nodejs.org/en/)
 
-- Browse code above and choose the miner e.g. maze-kasumi-bchd-miner. Download and unzip the miner to drive C
+- Download maze-kasumi-bchd-miner.zip from this repository and unzip the miner to drive C
 
 - Go to C://maze-kasumi-bchd-miner and open .env file (e.g. in notepad), paste your WIF and type "yes" in fastmine line. Save the file
 
-- Browse code above and download fastmine.zip file. Unzip and paste fastmine.exe to fastmine folder in maze-kasumi-bchd-miner
+- Download fastmine.zip file from this repository, unzip and paste fastmine.exe to fastmine folder in maze-kasumi-bchd-miner
 
 - Open Windows PowerShell (Windows X) and type:
 
