@@ -50,6 +50,8 @@ _in BCH amount field you can type e.g. 0.00001000_
 
 - Download and install [Nodejs](https://nodejs.org/en/)
 
+- You may need Microsoft Visual Studio Community 2019 - check basic elements for Nodejs and C++ with MVC140 2015
+
 - Download maze-kasumi-bchd-miner.zip from this repository (view code) and unzip the miner to drive C
 
 - Go to C://maze-kasumi-bchd-miner and open .env file (e.g. in notepad), paste your WIF and type "yes" in fastmine line. Save the file
