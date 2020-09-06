@@ -1,6 +1,6 @@
 ## Tutorial how to mine MAZE SLP token on Windows or Android phone
 
-_v2.0 created by [B_S_Z](https://t.me/b_s_z)_
+_v2.1 created by [B_S_Z](https://t.me/b_s_z)_
 
 [MAZE](https://mazetoken.github.io) is based on [Mistcoin](https://mistcoin.org)
 
@@ -46,15 +46,15 @@ _in BCH amount field you can type e.g. 0.00001000_
 
 - Right click on your mining address (in wallet_1) and get your private key (WIF)
 
-### Mining on Windows for beginners
+### Mining on Windows
 
 - Download and install [Nodejs](https://nodejs.org/en/)
 
-- You may need Microsoft Visual Studio Community 2019 - check basic elements for Nodejs and C++ (with MVC v.142 - VS 2019, CMake, C++/CLI and MSVC v.140 - VS 2015)
+- You may need [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) - install elements for Nodejs and C++ (basic + optional: MVC v.142 - VS 2019, CMake, C++/CLI and MSVC v.140 - VS 2015)
 
-- Download maze-kasumi-bchd-miner.zip from this repository (view code) and unzip the miner to drive C
+- Download maze-kasumi-bchd-miner.zip or other miner from this repository (view code) and unzip the miner to drive C
 
-- Go to C://maze-kasumi-bchd-miner and open .env file (e.g. in notepad), paste your WIF and type "yes" in fastmine line. Save the file
+- Go to C://maze-kasumi-bchd-miner (or other miner) and open .env file (e.g. in notepad), paste your WIF and type "yes" in fastmine line. Save the file
 
 - Download fastmine_1.zip file from this repository, unzip and paste fastmine.exe to fastmine folder in maze-kasumi-bchd-miner
 
