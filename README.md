@@ -1,10 +1,10 @@
 ## Tutorial how to mine MAZE SLP token on Windows or Android phone
 
-_v2.1 created by [B_S_Z](https://t.me/b_s_z)_
+_v2.2 created by [B_S_Z](https://t.me/b_s_z)_
 
 [MAZE](https://mazetoken.github.io) is based on [Mistcoin](https://mistcoin.org)
 
-We can use 3 different miners ([Kasumi's](https://mistcoin.org), [Kasumi's original version compiled by Blockparty-sh and team](https://github.com/blockparty-sh/mist-miner) and [Blue's miner](https://gitlab.com/blue_mist/miner)). You can also download pateched miners (e.g. BN error and unwanted BCH dust) from this repository (view code)
+We can use 3 different miners ([Kasumi's BCHD miner](https://mistcoin.org), [Kasumi's original version compiled by Blockparty-sh and team](https://github.com/blockparty-sh/mist-miner) and [Blue's miner](https://gitlab.com/blue_mist/miner)). You can also download these miners (patched for BigNumber error) from this repository (view code) to mine MAZE or Mist.
 
 _You will need to use a command line_
 
@@ -50,7 +50,7 @@ _in BCH amount field you can type e.g. 0.00001000_
 
 - Download and install [Nodejs](https://nodejs.org/en/)
 
-- You may need [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) - install elements for Nodejs and C++ (basic + optional: MVC v.142 - VS 2019, CMake, C++/CLI and MSVC v.140 - VS 2015)
+- You may need [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) - install Nodejs panel: default package and C++ and MSVC v.142 VS 2019; C++ panel: default package and C++, CMake, C++ ATL, C++/CLI, Java Script diagnostic and MSVC v.140 - VS 2015; Python panel: default package
 
 - Download maze-kasumi-bchd-miner.zip or other miner from this repository (view code) and unzip the miner to drive C
 
