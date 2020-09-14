@@ -1,6 +1,6 @@
 ## Tutorial how to mine MAZE SLP token on Windows or Android phone
 
-_v2.2 created by [B_S_Z](https://t.me/b_s_z)_
+_v2.3 created by [B_S_Z](https://t.me/b_s_z)_
 
 [MAZE](https://mazetoken.github.io) is based on [Mistcoin](https://mistcoin.org)
 
@@ -18,9 +18,9 @@ _You can use a spare phone_
 
 - Create two wallets in Electron Cash, e.g. wallet_1 (mining wallet) and wallet_2 (funding wallet)
 
-- Open wallet_2 (funding wallet) and send to this wallet some BCH, e.g. 0.00025000
+- Open wallet_2 (funding wallet), choose an address and some BCH, e.g. 0.00025000 to this address
 
-- Open wallet_1 (mining wallet), choose your address (this will be your mining address) and send to this address, from wallet_2, multiple 0.00001870 BCH in one transanction, e.g. paste in send tab pay to field: 
+- Open wallet_1 (mining wallet), choose two addresses. One address (mining address) will be for your mining coins (0.00001870). The second address (BCH address) will be for BCH (you will need BCH if you would like to send your tokens from your wallet). Send to mining address, from wallet_2, multiple 0.00001870 BCH in one transanction, e.g. paste in send tab pay to field: 
 
 simpleledger:yourminingaddress,0.00001870
 
@@ -45,6 +45,8 @@ simpleledger:yourminingaddress,0.00001870
 _in BCH amount field you can type e.g. 0.00001000_
 
 - Right click on your mining address (in wallet_1) and get your private key (WIF)
+
+- Don't send BCH to your mining address, otherwise you could pay high fee or you won't mine anything
 
 ### Mining on Windows
 
