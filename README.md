@@ -8,8 +8,6 @@ We can use 3 different miners ([Kasumi's BCHD miner](https://mistcoin.org), [Kas
 
 _You will need to use a command line_
 
-_You can also mine Mist_
-
 _You can use a spare phone_
 
 ### Prepare your Electron Cash SLP desktop wallet for mining
@@ -18,9 +16,9 @@ _You can use a spare phone_
 
 - Create two wallets in Electron Cash, e.g. wallet_1 (mining wallet) and wallet_2 (funding wallet)
 
-- Open wallet_2 (funding wallet), choose an address and some BCH, e.g. 0.00025000 to this address
+- Open wallet_2 (funding wallet), choose an address and send some BCH (e.g. 0.00025000) to this address
 
-- Open wallet_1 (mining wallet), choose two addresses. One address (mining address) will be for your mining coins (0.00001870). The second address (BCH address) will be for BCH (you will need BCH if you would like to send your tokens from your wallet). Send to mining address, from wallet_2, multiple 0.00001870 BCH in one transanction, e.g. paste in send tab pay to field: 
+- Open wallet_1 (mining wallet), choose two addresses. One address (mining address) will be for your mining coins (0.00001870). The second address (BCH address) will be for BCH (you will need BCH if you would like to send your tokens from your wallet). Send, to the mining address, from wallet_2, multiple 0.00001870 BCH in one transanction, e.g. paste in send tab pay to field: 
 
 simpleledger:yourminingaddress,0.00001870
 
