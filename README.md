@@ -1,6 +1,6 @@
 ## Tutorial how to mine MAZE SLP token on Windows or Android phone
 
-_v2.3 created by [B_S_Z](https://t.me/b_s_z)_
+_v2.4 created by [B_S_Z](https://t.me/b_s_z)_
 
 [MAZE](https://mazetoken.github.io) is based on [Mistcoin](https://mistcoin.org)
 
@@ -50,7 +50,9 @@ _in BCH amount field you can type e.g. 0.00001000_
 
 - Download and install [Nodejs](https://nodejs.org/en/)
 
-- You may need [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) - install Nodejs panel: default package and C++ and MSVC v.142 VS 2019; C++ panel: default package and C++, CMake, C++ ATL, C++/CLI, Java Script diagnostic and MSVC v.140 - VS 2015; Python panel: default package
+- You may need [Git](https://gitforwindows.org/)
+
+- You may need [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) - install Nodejs panel: default package and C++ and MSVC v.142 VS 2019; C++ desktop panel: default package and C++, CMake, C++ ATL, C++/CLI, Java Script diagnostic and MSVC v.140 - VS 2015; Python panel: default package. You should install at least C++, CMake and MSVC v.140 - VS 2015.
 
 - Download maze-kasumi-bchd-miner.zip or other miner from this repository (view code) and unzip the miner to drive C
 
