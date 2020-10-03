@@ -230,7 +230,6 @@ cd mazebchdminer
 
 npm start
 
-### Join [MAZE](https://t.me/mazemining) Telegram group
 
 _Keep your mining wallet as clean as possible (use it for mining only)_
 
