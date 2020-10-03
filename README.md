@@ -1,14 +1,58 @@
-## Tutorial how to mine MAZE SLP token on Windows or Android phone
+## MAZE mining environment and tutorial
+### MAZE is a decentralized, mineable, proof-of-work SLP token based on [Mistcoin](https://mistcoin.org/)
 
-_v2.4 created by [B_S_Z](https://t.me/b_s_z)_
+MAZE Token id: bb553ac2ac7af0fcd4f24f9dfacc7f925bfb1446c6e18c7966db95a8d50fb378
+
+MAZE Token contract script environment:
+- MINER_COVENANT_V1="5779820128947f777601207f75597982012c947f757601687f777678827758947f7576538b7f77765c7982777f011179011179ad011179828c7f756079a8011279bb011479815e7981788c88765b79968b0114795e795279965480880400000000011579bc7e0112790117797eaa765f797f757681008854011a797e56797e170000000000000000396a04534c50000101044d494e54200113797e030102087e54797e0c22020000000000001976a914011879a97e0288ac7e0b220200000000000017a9145379a97e01877e527952797e787eaa607988587901127993b175516b6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6c"
+- TOKEN_INIT_REWARD_V1=800000000
+- TOKEN_HALVING_INTERVAL_V1=4320
+- MINER_DIFFICULTY_V1=3
+- TOKEN_START_BLOCK_V1=645065
+- TOKEN_ID_V1="bb553ac2ac7af0fcd4f24f9dfacc7f925bfb1446c6e18c7966db95a8d50fb378"
+
+### MAZE Reward Schedule:
+
+Token Height | MAZE Reward
+
+1-4319 | 800
+
+4320-8639 | 400
+
+8640-12959 | 266,666666
+
+12960-17279 | 200
+
+17280-21599 | 160
+
+21600-25919 | 133,333333
+
+25920-30239 | 114,292929
+
+30240-34559 | 100
+
+34560< | ...
+
+MAZE contract script before removing dummy variables and nips not optimized -
+0511111111110a33333333333333333333040008af2f5302e01003c9d7095779820128947f777601207f75597982012c947f757601687f777678827758947f7576538b7f77765c7982777f011179011179ad011179828c7f756079a8011279bb011479815e7981788c88765b79968b0114795e795279965480880400000000011579bc7e0112790117797eaa765f797f757681008854011a797e56797e170000000000000000396a04534c50000101044d494e54200113797e030102087e54797e0c22020000000000001976a914011879a97e0288ac7e0b220200000000000017a9145379a97e01877e527952797e787eaa607988587901127993b17551777777777777777777777777777777777777777777777777777777777777
+
+MAZE contract script before removing dummy variables and nips optimized -
+0511111111110a33333333333333333333040008af2f5302e01003c9d7095779820128947f777601207f75597982012c947f757601687f777678827758947f7576538b7f77765c7982777f011179011179ad011179828c7f756079a8011279bb011479815e7981788c88765b79968b0114795e795279965480880400000000011579bc7e0112790117797eaa765f797f757681008854011a797e56797e170000000000000000396a04534c50000101044d494e54200113797e030102087e54797e0c22020000000000001976a914011879a97e0288ac7e0b220200000000000017a9145379a97e01877e527952797e787eaa607988587901127993b175516b6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6c
+
+MAZE was created as an experiment. If you can't "catch" Mist you can try with Maze
+
+MAZE [Telegram group](https://t.me/mazemining)
+
+_MAZE TOKEN 2020, created by [B_S_Z](https://t.me/b_s_z)_
+
+
+## Tutorial - how to mine MAZE SLP token on Windows or Android phone
 
 [MAZE](https://mazetoken.github.io) is based on [Mistcoin](https://mistcoin.org)
 
-We can use 3 different miners ([Kasumi's BCHD miner](https://mistcoin.org), [Kasumi's original version compiled by Blockparty-sh and team](https://github.com/blockparty-sh/mist-miner) and [Blue's miner](https://gitlab.com/blue_mist/miner)). You can also download these miners (patched for BigNumber error) from this repository (view code) to mine MAZE or Mist.
+Download ([BCHD miner](https://mistcoin.org), or Maze BCHD miner from this repository (that is the same miner but patched for BigNumber error and unwanted satoshis dust)
 
 _You will need to use a command line_
-
-_You can use a spare phone_
 
 ### Prepare your Electron Cash SLP desktop wallet for mining
 
@@ -50,15 +94,13 @@ _in BCH amount field you can type e.g. 0.00001000_
 
 - Download and install [Nodejs](https://nodejs.org/en/)
 
-- You may need [Git](https://gitforwindows.org/)
+- Download and install [Git](https://gitforwindows.org/)
 
-- You may need [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) - install Nodejs panel: default package and C++ and MSVC v.142 VS 2019; C++ desktop panel: default package and C++, CMake, C++ ATL, C++/CLI, Java Script diagnostic and MSVC v.140 - VS 2015; Python panel: default package. You should install at least C++, CMake and MSVC v.140 - VS 2015.
+- Download and install [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) with Node.js and C++ desktop defaults packages and at least C++, CMake and MSVC v.140 - VS 2015. If the miner won't work you need to add more features: MSVC v.142 VS 2019, C++ ATL, C++/CLI, Java Script diagnostic and maybe Python panel: default package
 
-- Download maze-kasumi-bchd-miner.zip or other miner from this repository (view code) and unzip the miner to drive C
+- Download mazebchdminer.zip from this repository (view code) and unzip the miner to drive C
 
-- Go to C://maze-kasumi-bchd-miner (or other miner) and open .env file (e.g. in notepad), paste your WIF and type "yes" in fastmine line. Save the file
-
-- Download fastmine_1.zip file from this repository, unzip and paste fastmine.exe to fastmine folder in maze-kasumi-bchd-miner
+- Go to C://mazebchdminer and open .env file (e.g. in notepad), paste your WIF (your wallet private key)
 
 - Open Windows PowerShell (Windows X) and type:
 
@@ -66,13 +108,13 @@ cd ..
 
 cd  ..
 
-cd maze-kasumi-bchd-miner
+cd mazebchdminer
 
 Run commands:
 
 npm i
 
-_Do not run npm audit fix !_
+_Ignore errors. Do not run npm audit fix !_
 
 npm start
 
@@ -110,31 +152,19 @@ sudo apt-get install nano
 
 sudo apt-get install zip unzip
 
-### Create a new directory e.g. miner, download and unpack the selected miner:
+### Create a new directory e.g. miner, download and unpack the miner:
 
 mkdir miner
 
 cd miner
 
-wget https://github.com/mazetoken/miners/raw/master/maze-kasumi-bchd-miner.zip
+wget https://github.com/mazetoken/miners/raw/master/mazebchdminer.zip
 
-- _You can also try other miners:_
+unzip mazebchdminer.zip
 
-_wget https://github.com/mazetoken/miners/raw/master/maze-kasumi-JT-miner.zip_
+_mazebchdminer directory will be created_
 
-or 
-
-_wget https://github.com/mazetoken/miners/raw/master/maze-blue-miner.zip_
-
-or Mist miner
-
-_wget https://github.com/mazetoken/miners/raw/master/mist-kasumi-bchd-miner.zip_
-
-unzip maze-kasumi-bchd-miner.zip
-
-- _maze-kasumi-bchd-miner directory will be created (or unzip other miner you have downloaded)_
-
-### Download CMake to miner directory (because we need a new version of CMake for fastmine ; no need to do this for Blue's miner):
+### Download CMake to miner directory (because we need a new version of CMake for fastmine):
 
 sudo apt install build-essential libssl-dev
 
@@ -148,7 +178,7 @@ cd cmake-3.16.5
 
 ### Run commands:
 
-- _*unfortunately, it will take some time - about two hours, so be patient; You can change the sleep time of your phone's display to 30 minutes to make it a little faster; you can skip this if you don't want to mine with fastmine):_
+_*unfortunately, it will take some time - about two hours, so be patient; You can change the sleep time of your phone's display to 30 minutes to make it a little faster; you can skip this if you don't want to mine with fastmine):_
 
 ./bootstrap
 
@@ -156,11 +186,11 @@ make
 
 sudo make install
 
-### Navigate to maze-kasumi-bchd-miner directory (or other miner directory):
+### Navigate to mazebchdminer directory:
 
 cd ..
 
-cd maze-kasumi-bchd-miner
+cd mazebchdminer
 
 ### Open .env in Nano editor:
 
@@ -180,13 +210,13 @@ cd fastmine
 
 cmake . && make
 
-### Navigate to maze-kasumi-bchd-miner (or other miner directory), install and start the miner:
+### Navigate to mazebchdminer, install and start the miner:
 
 cd ..
 
 npm i
 
-_Do not run npm audit fix !_
+_Ignore errors. Do not run npm audit fix !_
 
 npm start
 
@@ -196,7 +226,7 @@ npm start
 
 cd miner
 
-cd maze-kasumi-bchd-miner
+cd mazebchdminer
 
 npm start
 
