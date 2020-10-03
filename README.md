@@ -50,7 +50,7 @@ _MAZE TOKEN 2020, created by [B_S_Z](https://t.me/b_s_z)_
 
 _v.3.0_
 
-Download ([BCHD miner](https://mistcoin.org), or Maze BCHD miner from this repository (that is the same miner but patched for BigNumber error and unwanted satoshis dust)
+Download Mist [BCHD miner](https://mistcoin.org) - you will need to change .env file or download Maze BCHD miner (mazebchdminer.zip) from this repository (that is the same miner but prepared for mining Maze and patched for BigNumber error and unwanted satoshis dust)
 
 _You will need to use a command line_
 
