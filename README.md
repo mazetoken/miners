@@ -48,7 +48,7 @@ _MAZE TOKEN 2020, created by [B_S_Z](https://t.me/b_s_z)_
 
 ## Tutorial - how to mine MAZE SLP token on Windows or Android phone
 
-[MAZE](https://mazetoken.github.io) is based on [Mistcoin](https://mistcoin.org)
+_v.3.0_
 
 Download ([BCHD miner](https://mistcoin.org), or Maze BCHD miner from this repository (that is the same miner but patched for BigNumber error and unwanted satoshis dust)
 
