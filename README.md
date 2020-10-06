@@ -39,7 +39,7 @@ MAZE contract script before removing dummy variables and nips not optimized -
 MAZE contract script before removing dummy variables and nips optimized -
 0511111111110a33333333333333333333040008af2f5302e01003c9d7095779820128947f777601207f75597982012c947f757601687f777678827758947f7576538b7f77765c7982777f011179011179ad011179828c7f756079a8011279bb011479815e7981788c88765b79968b0114795e795279965480880400000000011579bc7e0112790117797eaa765f797f757681008854011a797e56797e170000000000000000396a04534c50000101044d494e54200113797e030102087e54797e0c22020000000000001976a914011879a97e0288ac7e0b220200000000000017a9145379a97e01877e527952797e787eaa607988587901127993b175516b6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6c
 
-MAZE was created as an experiment. If you can't "catch" Mist you can try with Maze
+MAZE was created as an experiment. If you can't "catch" Mist you can try with Maze or [dSLP](https://hackmd.io/@mazetoken/r1EcUwdIv)
 
 MAZE [Telegram group](https://t.me/mazemining)
 
@@ -98,7 +98,7 @@ _in BCH amount field you can type e.g. 0.00001000_
 
 - Download and install [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) with Node.js and C++ desktop defaults packages and at least C++, CMake and MSVC v.140 - VS 2015. If the miner won't work you need to add more features: MSVC v.142 VS 2019, C++ ATL, C++/CLI, Java Script diagnostic and maybe Python panel: default package
 
-- Download mazebchdminer.zip from this repository (view code) and unzip the miner to drive C
+- Download mazebchdminer.zip from this repository (view code) and unzip the miner to drive C _(or dslpbchdminer.zip - if you want to mine dSLP)
 
 - Go to C://mazebchdminer and open .env file (e.g. in notepad), paste your WIF (your wallet private key)
 
@@ -158,7 +158,9 @@ mkdir miner
 
 cd miner
 
-wget https://github.com/mazetoken/miners/raw/master/mazebchdminer.zip
+wget https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip
+
+wget https://github.com/mazetoken/mining/raw/master/dslpbchdminer.zip  _(if you want to mine dSLP)_
 
 unzip mazebchdminer.zip
 
