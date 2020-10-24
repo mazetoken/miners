@@ -48,11 +48,9 @@ _MAZE TOKEN 2020, created by [B_S_Z](https://t.me/b_s_z)_
 
 ## Tutorial - how to mine MAZE SLP token on Windows or Android phone
 
-_v.3.0_
+_v.4.0_
 
-Download Mist [BCHD miner](https://mistcoin.org) - you will need to change .env file or download Maze BCHD miner (mazebchdminer.zip) from this repository (that is the same miner but prepared for mining Maze and patched for BigNumber error and unwanted satoshis dust)
-
-_You will need to use a command line_
+We use Mist miner but prepared for mining Maze
 
 ### Prepare your Electron Cash SLP desktop wallet for mining
 
@@ -92,17 +90,86 @@ _in BCH amount field you can type e.g. 0.00001000_
 
 ### Mining on Windows
 
+There are three methods to install the miner (these methods weren't tested on fresh Windows system so if you have some issues or questions feel free to ask https://t.me/mazemining)
+
+#### 1 method
+
+- Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. Save the file
+
+- Open Windows Control panel - go to "Programs" - go to "Turn Windows features on or off" - select "Windows Subsystem for Linux" and check the box, click ok and reboot Windows
+
+- Download and install Ubuntu 20.4 LTS from Microsoft Store (type ubuntu in search bar)
+
+- Open Ubuntu command line (Start menu - Ubuntu)
+
+- Setup your username and password
+
+- Type commands:
+
+sudo apt update
+
+sudo apt upgrade
+
+cd /mnt/c
+
+cd mazebchdminer
+
+cd fastmine
+
+cmake . && make
+
+cd ..
+
+npm i
+
+_Ignore errors. Do not run npm audit fix!_
+
+npm start
+
+_*to stop the miner press Ctrl C_
+
+
+#### 2 method
+
+- Download and install [Nodejs](https://nodejs.org/en/)
+
+- Download and install [GitBash](https://gitforwindows.org/)
+
+- Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. Save the file
+
+- Open Git Bash command line (Start menu - Git - Git Bash) and type commands:
+
+cd ..
+
+cd ..
+
+cd mazebchdminer
+
+cd fastmine
+
+cmake . && make
+
+cd ..
+
+npm i
+
+_Ignore errors. Do not run npm audit fix!_
+
+npm start
+
+_*to stop the miner press Ctrl C_
+
+#### 3 method:
+
 - Download and install [Nodejs](https://nodejs.org/en/)
 
 - Download and install [Git](https://gitforwindows.org/)
 
 - Download and install [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) with Node.js and C++ desktop defaults packages and at least C++, CMake and MSVC v.140 - VS 2015. If the miner won't work you need to add more features: MSVC v.142 VS 2019, C++ ATL, C++/CLI, Java Script diagnostic and maybe Python panel: default package
 
-- Download mazebchdminer.zip from this repository (view code) and unzip the miner to drive C _(or dslpbchdminer.zip - if you want to mine dSLP)
+- Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdmazeminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. Save the file
 
-- Go to C://mazebchdminer and open .env file (e.g. in notepad), paste your WIF (your wallet private key)
-
-- Open Windows PowerShell (Windows X) and type:
+- Open Windows PowerShell (Windows X) and type commands:
 
 cd ..
 
@@ -110,15 +177,17 @@ cd  ..
 
 cd mazebchdminer
 
-Run commands:
-
 npm i
 
 _Ignore errors. Do not run npm audit fix !_
 
 npm start
 
+_*to stop the miner press Ctrl C_
+
 ### Mining on Android phone
+
+_You will need 2GB ram in your phone_
 
 Go to Google Play Store and download UserLAnd app
 
@@ -130,7 +199,7 @@ Go to Google Play Store and download UserLAnd app
 
 - Choose SSH
 
-### Run commands:
+### Type commands:
 
 sudo apt-get update && sudo apt-get dist-upgrade
 
@@ -144,9 +213,9 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 sudo apt-get install -y nodejs
 
-sudo apt-get install gcc g++ make
+sudo apt-get install npm
 
-sudo npm install -g npm@latest
+sudo apt-get install gcc g++ make
 
 sudo apt-get install nano
 
@@ -159,8 +228,6 @@ mkdir miner
 cd miner
 
 wget https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip
-
-wget https://github.com/mazetoken/mining/raw/master/dslpbchdminer.zip  _(if you want to mine dSLP)_
 
 unzip mazebchdminer.zip
 
