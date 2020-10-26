@@ -90,9 +90,9 @@ _* Don't send other BCH to your mining address, otherwise you could pay high fee
 
 ### Mining on Windows
 
-There are three methods to install the miner (these methods weren't tested on "fresh" Windows system (without nodejs, Microsoft VS and other stuff), so if you have some issues or questions feel free to ask https://t.me/mazemining)
+Two methods to install the miner. If you have some issues or questions feel free to ask https://t.me/mazemining)
 
-#### 1 method
+#### 1 method:
 
 - Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. Save the file
 
@@ -106,11 +106,15 @@ There are three methods to install the miner (these methods weren't tested on "f
 
 - Type commands:
 
+cd /mnt/c
+
 sudo apt update
 
 sudo apt upgrade
 
-cd /mnt/c
+sudo apt get install nodejs npm
+
+sudo apt-get install git gcc g++ make
 
 cd mazebchdminer
 
@@ -128,44 +132,13 @@ npm start
 
 _* to stop the miner press Ctrl C_
 
-
-#### 2 method
-
-- Download and install [Nodejs](https://nodejs.org/en/)
-
-- Download and install [Git](https://gitforwindows.org/)
-
-- Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. Save the file
-
-- Open Git Bash command line (Start menu - Git - Git Bash) and type commands:
-
-cd ..
-
-cd ..
-
-cd mazebchdminer
-
-cd fastmine
-
-cmake . && make
-
-cd ..
-
-npm i
-
-_* Ignore errors. Do not run npm audit fix!_
-
-npm start
-
-_* to stop the miner press Ctrl C_
-
-#### 3 method:
+#### 2 method:
 
 - Download and install [Nodejs](https://nodejs.org/en/)
 
 - Download and install [Git](https://gitforwindows.org/)
 
-- Download and install [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) with Node.js and C++ desktop defaults packages and at least C++, CMake and MSVC v.140 - VS 2015. If the miner won't work you need to add more features: MSVC v.142 VS 2019, C++ ATL, C++/CLI, Java Script diagnostic and maybe Python panel: default package. It takes a lot of disc space.
+- Download and install [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) with Node.js and C++ desktop defaults packages and at least C++, CMake and MSVC v.140 - VS 2015. If the miner won't work you need to add more features: MSVC v.142 VS 2019, C++ ATL, C++/CLI, Java Script diagnostic and maybe Python panel: default package. It can take about 4-10 GB of your disc space.
 
 - Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdmazeminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. Save the file
 
