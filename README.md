@@ -50,7 +50,7 @@ _MAZE TOKEN 2020, created by [B_S_Z](https://t.me/b_s_z)_
 
 _v.4.0_
 
-We use Mist miner but prepared for mining Maze
+We use Mist miner but prepared for mining Maze. You can also download Mist miner and dSLP miner from [here](https://github.com/mazetoken/workflow)
 
 ### Prepare your Electron Cash SLP desktop wallet for mining
 
@@ -60,7 +60,7 @@ We use Mist miner but prepared for mining Maze
 
 - Open wallet_2 (funding wallet), choose an address and send some BCH (e.g. 0.00025000) to this address
 
-- Open wallet_1 (mining wallet), choose two addresses. One address (mining address) will be for your mining coins (0.00001870). The second address (BCH address) will be for BCH (you will need BCH if you would like to send your tokens from your wallet). Send, to the mining address, from wallet_2, multiple 0.00001870 BCH in one transanction, e.g. paste in send tab pay to field: 
+- Open wallet_1 (mining wallet), choose two addresses. One address (mining address) will be for your mining coins (0.00001870). The second address (BCH address) will be for BCH (you will need BCH if you would like to send your tokens from your wallet). Send, to the mining address, from wallet_2, multiple 0.00001870 BCH in one transanction, e.g. paste in send tab pay to field (you can repeat it if you want): 
 
 simpleledger:yourminingaddress,0.00001870
 
@@ -82,15 +82,15 @@ simpleledger:yourminingaddress,0.00001870
 
 simpleledger:yourminingaddress,0.00001870
 
-_in BCH amount field you can type e.g. 0.00001000_
+_in BCH amount field you can type e.g. 0.00000600_
 
 - Right click on your mining address (in wallet_1) and get your private key (WIF)
 
-- Don't send BCH to your mining address, otherwise you could pay high fee or you won't mine anything
+_* Don't send other BCH to your mining address, otherwise you could pay high fee or you won't mine anything_
 
 ### Mining on Windows
 
-There are three methods to install the miner (these methods weren't tested on fresh Windows system so if you have some issues or questions feel free to ask https://t.me/mazemining)
+There are three methods to install the miner (these methods weren't tested on "fresh" Windows system (without nodejs, Microsoft VS and other stuff), so if you have some issues or questions feel free to ask https://t.me/mazemining)
 
 #### 1 method
 
@@ -122,18 +122,18 @@ cd ..
 
 npm i
 
-_Ignore errors. Do not run npm audit fix!_
+_* Ignore errors. Do not run npm audit fix!_
 
 npm start
 
-_*to stop the miner press Ctrl C_
+_* to stop the miner press Ctrl C_
 
 
 #### 2 method
 
 - Download and install [Nodejs](https://nodejs.org/en/)
 
-- Download and install [GitBash](https://gitforwindows.org/)
+- Download and install [Git](https://gitforwindows.org/)
 
 - Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. Save the file
 
@@ -153,11 +153,11 @@ cd ..
 
 npm i
 
-_Ignore errors. Do not run npm audit fix!_
+_* Ignore errors. Do not run npm audit fix!_
 
 npm start
 
-_*to stop the miner press Ctrl C_
+_* to stop the miner press Ctrl C_
 
 #### 3 method:
 
@@ -165,7 +165,7 @@ _*to stop the miner press Ctrl C_
 
 - Download and install [Git](https://gitforwindows.org/)
 
-- Download and install [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) with Node.js and C++ desktop defaults packages and at least C++, CMake and MSVC v.140 - VS 2015. If the miner won't work you need to add more features: MSVC v.142 VS 2019, C++ ATL, C++/CLI, Java Script diagnostic and maybe Python panel: default package
+- Download and install [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) with Node.js and C++ desktop defaults packages and at least C++, CMake and MSVC v.140 - VS 2015. If the miner won't work you need to add more features: MSVC v.142 VS 2019, C++ ATL, C++/CLI, Java Script diagnostic and maybe Python panel: default package. It takes a lot of disc space.
 
 - Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdmazeminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. Save the file
 
@@ -179,15 +179,15 @@ cd mazebchdminer
 
 npm i
 
-_Ignore errors. Do not run npm audit fix !_
+_* Ignore errors. Do not run npm audit fix !_
 
 npm start
 
-_*to stop the miner press Ctrl C_
+_* to stop the miner press Ctrl C_
 
 ### Mining on Android phone
 
-_You will need 2GB ram in your phone_
+_* You will need 2GB ram in your phone_
 
 Go to Google Play Store and download UserLAnd app
 
@@ -247,7 +247,7 @@ cd cmake-3.16.5
 
 ### Run commands:
 
-_*unfortunately, it will take some time - about two hours, so be patient; You can change the sleep time of your phone's display to 30 minutes to make it a little faster; you can skip this if you don't want to mine with fastmine):_
+_* unfortunately, it will take some time - about two-three hours, so be patient; You can change the sleep time of your phone's display to 30 minutes to make it a little faster; you can skip this if you don't want to mine with fastmine):_
 
 ./bootstrap
 
@@ -285,7 +285,7 @@ cd ..
 
 npm i
 
-_Ignore errors. Do not run npm audit fix !_
+_* Ignore errors. Do not run npm audit fix !_
 
 npm start
 
@@ -300,7 +300,7 @@ cd mazebchdminer
 npm start
 
 
-_Keep your mining wallet as clean as possible (use it for mining only)_
+_* Keep your mining wallet as clean as possible (use it for mining only)_
 
 _I will update this tutorial if I find bugs or improvements_
 
