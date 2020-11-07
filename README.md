@@ -114,7 +114,7 @@ Two methods to install the miner. If you have some issues or questions feel free
 
 - Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. If you want you can try to set BCHD_GRPC_URL="bchd.imaginary.cash:8335" in .env (no need to do this - default BCHD_URL can be empty). Save the file
 
-_If you want to try mminer download [mminer](https://github.com/mazetoken/mminer) - click green button - download .zip_
+_If you want to try mminer download [mminer](https://github.com/mazetoken/mminer) - click Code (green button) - download zip_
 
 - Open Windows Control panel - go to "Programs" - go to "Turn Windows features on or off" - select "Windows Subsystem for Linux" and check the box, click ok and reboot Windows
 
