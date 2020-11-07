@@ -54,7 +54,7 @@ _v.5.0_
 
 mazebchdminer is a version of Mist miner - [bchd_mist_miner_v1](https://mistcoin.org), prepared for mining [MAZE](https://mazetoken.github.io) and patched for BigNumber error and [dust input attack](https://gitlab.com/blue_mist/miner/-/commit/e64b1440619589483c3b38870e5cafb791448045)
 
-_You can try to install and mine with [mminer 1.0.0](https://github.com/mazetoken/mminer) - updated version of (bchd_mist_miner_V1 and mazebchdminer). Tutorial is the same. I've updated updated npm packages and generateV1.ts - support for slpjs v.0.27.8 and grpc-bchrpc-node v.0.11.3. You need npm@7.0.6 for mminer. No guarantee that mminer will be faster than mazebchdminer, but from now I will only work with mminer (mazebchdminer won`t be updated)._
+_You can try to install and mine with [mminer 1.0.0](https://github.com/mazetoken/mminer) - updated version of (bchd_mist_miner_V1 and mazebchdminer). Tutorial is the same. I've updated npm packages and generateV1.ts - support for slpjs v.0.27.8 and grpc-bchrpc-node v.0.11.3. You need npm@7.0.6 for mminer. No guarantee that mminer will be faster than mazebchdminer, but from now I will only work with mminer (mazebchdminer won`t be updated)._
 
 You can mine other tokens (Mist, dSLP, BTCL) with mazebchminer (or mminer) too. To do this you need to:
 
@@ -98,6 +98,8 @@ simpleledger:yourminingaddress,0.00001870
 
 simpleledger:yourminingaddress,0.00001870
 
+_... - you can add more_
+
 _* in BCH amount field you can type e.g. 0.00000600_
 
 - Right click on your mining address (in wallet_1) and get your private key (WIF)
@@ -130,8 +132,6 @@ sudo apt update
 
 sudo apt upgrade
 
-sudo npm i -g npm@npm7.0.6
-
 sudo apt-get install git gcc g++ make
 
 cd mazebchdminer
@@ -144,7 +144,7 @@ cd ..
 
 npm i
 
-_Do not run npm audit fix! Don`t install npm @7.0.9_
+_* Ignore errors. Do not run npm audit fix!_
 
 npm start
 
@@ -206,7 +206,7 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 sudo apt-get install -y nodejs
 
-sudo apt-get install npm -g npm@7.0.6
+sudo apt-get install npm
 
 sudo apt-get install gcc g++ make
 
@@ -282,7 +282,7 @@ cd ..
 
 npm i
 
-_* Do not run npm audit fix !_
+_* Ignore errors. Do not run npm audit fix !_
 
 npm start
 
@@ -295,6 +295,7 @@ cd miner
 cd mazebchdminer
 
 npm start
+
 
 
 _I will update this tutorial if I find bugs or improvements_
