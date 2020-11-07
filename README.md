@@ -54,11 +54,11 @@ _v.5.0_
 
 mazebchdminer is a version of Mist miner - [bchd_mist_miner_v1](https://mistcoin.org), prepared for mining [MAZE](https://mazetoken.github.io) and patched for BigNumber error and [dust input attack](https://gitlab.com/blue_mist/miner/-/commit/e64b1440619589483c3b38870e5cafb791448045)
 
-_You can try to install and mine with [mminer 1.0.0](https://github.com/mazetoken/mminer) - updated version of (bchd_mist_miner_V1 and mazebchdminer). Tutorial is the same. I've updated npm packages and generateV1.ts - support for slpjs v.0.27.8 and grpc-bchrpc-node v.0.11.3. You need npm@7.0.6 for mminer. No guarantee that mminer will be faster than mazebchdminer, but from now I will only work with mminer (mazebchdminer won`t be updated)._
+_You can try to install and mine with [mminer 1.0.0](https://github.com/mazetoken/mminer) - updated version of (bchd_mist_miner_V1 and mazebchdminer). Tutorial is the same. I've updated npm packages and generateV1.ts - support for slpjs v.0.27.8 and grpc-bchrpc-node v.0.11.3. No guarantee that mminer will be faster than mazebchdminer, but from now I will only work with mminer (mazebchdminer won`t be updated)._
 
 You can mine other tokens (Mist, dSLP, BTCL) with mazebchminer (or mminer) too. To do this you need to:
 
-- change .env file in mazebchdminer folder for [other token environment](https://github.com/mazetoken/mining/raw/master/tokensenv.zip)
+- change .env file in mazebchdminer folder for [other token environment](https://github.com/mazetoken/mining/blob/master/tokensenv/tokensenv.zip)
 
 - delete .cache file from mazebchdminer folder,
 
@@ -66,7 +66,7 @@ You can mine other tokens (Mist, dSLP, BTCL) with mazebchminer (or mminer) too. 
 
 _Before you start mining other tokens you can paste .cache file for the token you want to mine to speed up downloading txid (token txid are stored in .cache file; make sure that there is a dot before cache file name)_
 
-_You can get .cache files for different tokens from [here](https:/github.com/mazetoken/mining/raw/master/tokenscache.zip)_
+_You can get .cache files for different tokens from [here](https://github.com/mazetoken/mining/blob/master/tokenscache/tokenscache.zip)_
 
 ### Prepare your Electron Cash SLP desktop wallet for mining
 
@@ -206,7 +206,7 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 sudo apt-get install -y nodejs
 
-sudo apt-get install npm
+sudo npm i -g npm@7.0.6
 
 sudo apt-get install gcc g++ make
 
@@ -226,7 +226,7 @@ unzip mazebchdminer.zip
 
 _mazebchdminer directory will be created_
 
-_If you want to try mminer type: git clone https://github.com/mazetoken/mminer.git_
+_If you want to try mminer type: git clone https://github.com/mazetoken/mminer.git ; mminer will be downloaded and mminer directory will be created ; follow the tutorial_
 
 ### Download CMake to miner directory (because we need a new version of CMake for fastmine):
 
