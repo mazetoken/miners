@@ -1,15 +1,19 @@
 ## MAZE mining environment and tutorial
-### MAZE is a decentralized, mineable, proof-of-work SLP token based on [Mistcoin](https://mistcoin.org/)
+### MAZE is a mineable, proof-of-work SLP token based on [Mistcoin](https://mistcoin.org/)
+
+_scroll down for mining tutorial_
 
 MAZE Token id: bb553ac2ac7af0fcd4f24f9dfacc7f925bfb1446c6e18c7966db95a8d50fb378
 
-MAZE Token contract script environment:
+MAZE Token covenant contract script environment:
 - MINER_COVENANT_V1="5779820128947f777601207f75597982012c947f757601687f777678827758947f7576538b7f77765c7982777f011179011179ad011179828c7f756079a8011279bb011479815e7981788c88765b79968b0114795e795279965480880400000000011579bc7e0112790117797eaa765f797f757681008854011a797e56797e170000000000000000396a04534c50000101044d494e54200113797e030102087e54797e0c22020000000000001976a914011879a97e0288ac7e0b220200000000000017a9145379a97e01877e527952797e787eaa607988587901127993b175516b6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6c"
 - TOKEN_INIT_REWARD_V1=800000000
 - TOKEN_HALVING_INTERVAL_V1=4320
 - MINER_DIFFICULTY_V1=3
 - TOKEN_START_BLOCK_V1=645065
 - TOKEN_ID_V1="bb553ac2ac7af0fcd4f24f9dfacc7f925bfb1446c6e18c7966db95a8d50fb378"
+
+_MINER_COVENANT_V1 is a template and can be used for every mineable tokens based on Mist_
 
 ### MAZE Reward Schedule:
 
@@ -33,24 +37,36 @@ Token Height | MAZE Reward
 
 34560< | ...
 
-MAZE contract script before removing dummy variables and nips not optimized -
+MAZE covenant contract script before removing dummy variables and nips not optimized -
 0511111111110a33333333333333333333040008af2f5302e01003c9d7095779820128947f777601207f75597982012c947f757601687f777678827758947f7576538b7f77765c7982777f011179011179ad011179828c7f756079a8011279bb011479815e7981788c88765b79968b0114795e795279965480880400000000011579bc7e0112790117797eaa765f797f757681008854011a797e56797e170000000000000000396a04534c50000101044d494e54200113797e030102087e54797e0c22020000000000001976a914011879a97e0288ac7e0b220200000000000017a9145379a97e01877e527952797e787eaa607988587901127993b17551777777777777777777777777777777777777777777777777777777777777
 
-MAZE contract script before removing dummy variables and nips optimized -
+MAZE covenant contract script before removing dummy variables and nips optimized -
 0511111111110a33333333333333333333040008af2f5302e01003c9d7095779820128947f777601207f75597982012c947f757601687f777678827758947f7576538b7f77765c7982777f011179011179ad011179828c7f756079a8011279bb011479815e7981788c88765b79968b0114795e795279965480880400000000011579bc7e0112790117797eaa765f797f757681008854011a797e56797e170000000000000000396a04534c50000101044d494e54200113797e030102087e54797e0c22020000000000001976a914011879a97e0288ac7e0b220200000000000017a9145379a97e01877e527952797e787eaa607988587901127993b175516b6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6c
-
-MAZE was created as an experiment. If you can't "catch" Mist you can try with Maze or [dSLP](https://hackmd.io/@mazetoken/r1EcUwdIv)
 
 MAZE [Telegram group](https://t.me/mazemining)
 
 _MAZE TOKEN 2020, created by [B_S_Z](https://t.me/b_s_z)_
 
 
-## Tutorial - how to mine MAZE SLP token on Windows or Android phone
+## Tutorial - how to mine MAZE SLP token (or other tokens) on Windows or Android phone
 
-_v.4.0_
+_v.5.0_
 
-We use Mist miner but prepared for mining Maze. You can also download Mist miner and dSLP miner from [here](https://github.com/mazetoken/workflow)
+mazebchdminer is a version of Mist miner - [bchd_mist_miner_v1](https://mistcoin.org), prepared for mining [MAZE](https://mazetoken.github.io) and patched for BigNumber error and [dust input attack](https://gitlab.com/blue_mist/miner/-/commit/e64b1440619589483c3b38870e5cafb791448045)
+
+_You can try to install and mine with [mminer 1.0.0](https://github.com/mazetoken/mminer) - updated version of (bchd_mist_miner_V1 and mazebchdminer). Tutorial is the same. I've updated updated npm packages and generateV1.ts - support for slpjs v.0.27.8 and grpc-bchrpc-node v.0.11.3. You need npm@7.0.6 for mminer. No guarantee that mminer will be faster than mazebchdminer, but from now I will only work with mminer (mazebchdminer won`t be updated)._
+
+You can mine other tokens (Mist, dSLP, BTCL) with mazebchminer (or mminer) too. To do this you need to:
+
+- change .env file in mazebchdminer folder for [other token environment](https://github.com/mazetoken/mining/raw/master/tokensenv.zip)
+
+- delete .cache file from mazebchdminer folder,
+
+- delete cache.js and cache.js.map files from mazebchdminer src folder (if you have node_modules already installed in mazebchdminer folder)
+
+_Before you start mining other tokens you can paste .cache file for the token you want to mine to speed up downloading txid (token txid are stored in .cache file; make sure that there is a dot before cache file name)_
+
+_You can get .cache files for different tokens from [here](https:/github.com/mazetoken/mining/raw/master/tokenscache.zip)_
 
 ### Prepare your Electron Cash SLP desktop wallet for mining
 
@@ -60,7 +76,7 @@ We use Mist miner but prepared for mining Maze. You can also download Mist miner
 
 - Open wallet_2 (funding wallet), choose an address and send some BCH (e.g. 0.00025000) to this address
 
-- Open wallet_1 (mining wallet), choose two addresses. One address (mining address) will be for your mining coins (0.00001870). The second address (BCH address) will be for BCH (you will need BCH if you would like to send your tokens from your wallet). Send, to the mining address, from wallet_2, multiple 0.00001870 BCH in one transanction, e.g. paste in send tab pay to field (you can repeat it if you want): 
+- Open wallet_1 (mining wallet), choose your mining address for your mining coins (0.00001870). Send, to the mining address, from wallet_2, multiple 0.00001870 BCH in one transanction e.g. - paste in send tab - pay to field: 
 
 simpleledger:yourminingaddress,0.00001870
 
@@ -82,7 +98,7 @@ simpleledger:yourminingaddress,0.00001870
 
 simpleledger:yourminingaddress,0.00001870
 
-_in BCH amount field you can type e.g. 0.00000600_
+_* in BCH amount field you can type e.g. 0.00000600_
 
 - Right click on your mining address (in wallet_1) and get your private key (WIF)
 
@@ -94,7 +110,9 @@ Two methods to install the miner. If you have some issues or questions feel free
 
 #### 1 method:
 
-- Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. Save the file
+- Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. If you want you can try to set BCHD_GRPC_URL="bchd.imaginary.cash:8335" in .env (no need to do this - default BCHD_URL can be empty). Save the file
+
+_If you want to try mminer download [mminer](https://github.com/mazetoken/mminer) - click green button - download .zip_
 
 - Open Windows Control panel - go to "Programs" - go to "Turn Windows features on or off" - select "Windows Subsystem for Linux" and check the box, click ok and reboot Windows
 
@@ -112,7 +130,7 @@ sudo apt update
 
 sudo apt upgrade
 
-sudo apt get install nodejs npm
+sudo npm i -g npm@npm7.0.6
 
 sudo apt-get install git gcc g++ make
 
@@ -126,7 +144,7 @@ cd ..
 
 npm i
 
-_* Ignore errors. Do not run npm audit fix!_
+_Do not run npm audit fix! Don`t install npm @7.0.9_
 
 npm start
 
@@ -134,13 +152,13 @@ _* to stop the miner press Ctrl C_
 
 #### 2 method:
 
-- Download and install [Nodejs](https://nodejs.org/en/)
+- Make sure that Microsoft Visual C++ Redistributable is installed on your system. If it`s not, you can download it from [here](https://aka.ms/vs/16/release/VC_redist.x86.exe) and [here](https://aka.ms/vs/16/release/VC_redist.x64.exe) - you need to install both
+
+- Download and install [Nodejs](https://nodejs.org/en/) 14.15.0
 
 - Download and install [Git](https://gitforwindows.org/)
 
-- Download and install [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/en/) with Node.js and C++ desktop defaults packages and at least C++, CMake and MSVC v.140 - VS 2015. If the miner won't work you need to add more features: MSVC v.142 VS 2019, C++ ATL, C++/CLI, Java Script diagnostic and maybe Python panel: default package. It can take about 4-10 GB of your disc space.
-
-- Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdmazeminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. Save the file
+- Download [mazebchdminer.zip](https://github.com/mazetoken/mining/raw/master/mazebchdminer.zip) and unzip it. Copy mazebchdmazeminer folder to drive C. Open the folder and open .env file in notepad. Paste your WIF in .env. If you want you can try to set BCHD_GRPC_URL="bchd.imaginary.cash:8335" in .env (no need to do this - default BCHD_URL can be empty). Save the file. If you run multiple instances on the same pc/laptop BCHD_GRPC_URL should be the same for every instance
 
 - Open Windows PowerShell (Windows X) and type commands:
 
@@ -150,13 +168,15 @@ cd  ..
 
 cd mazebchdminer
 
+npm i -g npm@7.0.6 _(do this only once - npm will be updated globally; don`t update to npm@7.0.9)_
+
 npm i
 
-_* Ignore errors. Do not run npm audit fix !_
+_* Do not run npm audit fix !_
 
 npm start
 
-_* to stop the miner press Ctrl C_
+_* to stop the miner press Ctrl C and type Y_
 
 ### Mining on Android phone
 
@@ -186,7 +206,7 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 sudo apt-get install -y nodejs
 
-sudo apt-get install npm
+sudo apt-get install npm -g npm@7.0.6
 
 sudo apt-get install gcc g++ make
 
@@ -206,6 +226,8 @@ unzip mazebchdminer.zip
 
 _mazebchdminer directory will be created_
 
+_If you want to try mminer type: git clone https://github.com/mazetoken/mminer.git_
+
 ### Download CMake to miner directory (because we need a new version of CMake for fastmine):
 
 sudo apt install build-essential libssl-dev
@@ -220,7 +242,7 @@ cd cmake-3.16.5
 
 ### Run commands:
 
-_* unfortunately, it will take some time - about two-three hours, so be patient; You can change the sleep time of your phone's display to 30 minutes to make it a little faster; you can skip this if you don't want to mine with fastmine):_
+_* unfortunately, it will take some time - about two-three hours, so be patient; You can change the sleep time of your phone's display to 30 minutes to make it a little faster; you can skip this if you don't want to mine with fastmine; no need to use fastmine for mining dSLP token):_
 
 ./bootstrap
 
@@ -240,9 +262,11 @@ sudo nano .env
 
 - _Type/paste your WIF=" ..." (right click on your addres in Electron Cash wallet to get a private key)_
 
-- _You can change your tag in MINER_UTF8="..."_
+- _Type/paste other token environment if you want to mine other mineable tokens_
 
-- _You can change FASTMIE to "yes" (leave empty or type "no" if you don't want to mine with fastmine)
+- _You can type your tag in MINER_UTF8="..."_
+
+- _You can change FASTMIE to "no" (if you didn`t install fastmine)
 
 - _Tap: ctrl O enter - to save changes and ctrl X enter - to exit editor_
 
@@ -258,7 +282,7 @@ cd ..
 
 npm i
 
-_* Ignore errors. Do not run npm audit fix !_
+_* Do not run npm audit fix !_
 
 npm start
 
@@ -272,8 +296,6 @@ cd mazebchdminer
 
 npm start
 
-
-_* Keep your mining wallet as clean as possible (use it for mining only)_
 
 _I will update this tutorial if I find bugs or improvements_
 
