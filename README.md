@@ -132,9 +132,17 @@ sudo apt update
 
 sudo apt upgrade
 
-sudo apt-get install git gcc g++ make
+sudo apt-get install git cmake gcc g++ make
 
 cd mazebchdminer
+
+cd fastmine
+
+cmake . && make
+
+cd ..
+
+- In mazebchdminer directory type commands:
 
 npm i
 
@@ -190,11 +198,7 @@ Go to Google Play Store and download UserLAnd app
 
 sudo apt-get update && sudo apt-get dist-upgrade
 
-sudo apt-get install git
-
-sudo apt-get install wget
-
-sudo apt-get install curl
+sudo apt-get install git wget curl
 
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
@@ -202,11 +206,9 @@ sudo apt-get install -y nodejs
 
 sudo npm i -g npm@7.0.6
 
-sudo apt-get install gcc g++ make
+sudo apt-get install cmake gcc g++ make
 
-sudo apt-get install nano
-
-sudo apt-get install zip unzip
+sudo apt-get install nano zip unzip
 
 ### Create a new directory e.g. miner, download and unpack the miner:
 
@@ -226,13 +228,13 @@ _If you want to try mminer type: git clone https://github.com/mazetoken/mminer.g
 
 sudo apt install build-essential libssl-dev
 
-wget https://github.com/Kitware/CMake/releases/download/v3.16.5/cmake-3.16.5.tar.gz
+wget https://github.com/Kitware/CMake/releases/download/v3.18.4/cmake-3.18.4.tar.gz
 
-tar -zxvf cmake-3.16.5.tar.gz
+tar -zxvf cmake-3.18.4.tar.gz
 
 ### Navigate to cmake directory:
 
-cd cmake-3.16.5
+cd cmake-3.18.4
 
 ### Run commands:
 
