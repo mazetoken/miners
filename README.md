@@ -136,12 +136,6 @@ sudo apt-get install git gcc g++ make
 
 cd mazebchdminer
 
-cd fastmine
-
-cmake . && make
-
-cd ..
-
 npm i
 
 _* Ignore errors. Do not run npm audit fix!_
