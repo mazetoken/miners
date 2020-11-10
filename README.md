@@ -58,7 +58,7 @@ _You can try to install and mine with [mminer 1.0.0](https://github.com/mazetoke
 
 You can mine other tokens (Mist, dSLP, BTCL) with mazebchminer (or mminer) too. To do this you need to:
 
-- change .env file in mazebchdminer folder for [other token environment](https://github.com/mazetoken/mining/blob/master/tokensenv/tokensenv.zip)
+- change .env file in mazebchdminer folder for [other token environment](https://github.com/mazetoken/mining/tree/master/tokensenv)
 
 - delete .cache file from mazebchdminer folder,
 
@@ -66,7 +66,7 @@ You can mine other tokens (Mist, dSLP, BTCL) with mazebchminer (or mminer) too. 
 
 _Before you start mining other tokens you can paste .cache file for the token you want to mine to speed up downloading txid (token txid are stored in .cache file; make sure that there is a dot before cache file name). Keep in mind that it may not work for you and you will have to download your own txid - your owna .cache file will be created_
 
-_You can get .cache files for different tokens from [here](https://github.com/mazetoken/mining/blob/master/tokenscache/tokenscache.zip)_
+_You can get .cache files for different tokens from [here](https://github.com/mazetoken/mining/tree/master/tokenscache)_
 
 ### Prepare your Electron Cash SLP desktop wallet for mining
 
