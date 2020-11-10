@@ -1,1 +1,2 @@
-You can download .cache file (with txid) for mineable tokens (Mist, dSLP, BTCL)
+You can download .cache file (with txid) for mineable tokens (Maze, Mist, dSLP, BTCL) and paste it to mazebchdminer folder or mminer folder, to speed up txid download. It may not work for you, but you can try.
+If you already have node_modules installed and want to copy/paste .cache from different token, remove cache.js and cache.js.map files from src folder.

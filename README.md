@@ -64,7 +64,7 @@ You can mine other tokens (Mist, dSLP, BTCL) with mazebchminer (or mminer) too. 
 
 - delete cache.js and cache.js.map files from mazebchdminer src folder (if you have node_modules already installed in mazebchdminer folder)
 
-_Before you start mining other tokens you can paste .cache file for the token you want to mine to speed up downloading txid (token txid are stored in .cache file; make sure that there is a dot before cache file name)_
+_Before you start mining other tokens you can paste .cache file for the token you want to mine to speed up downloading txid (token txid are stored in .cache file; make sure that there is a dot before cache file name). Keep in mind that it may not work for you and you will have to download your own txid - your owna .cache file will be created_
 
 _You can get .cache files for different tokens from [here](https://github.com/mazetoken/mining/blob/master/tokenscache/tokenscache.zip)_
 
@@ -100,7 +100,7 @@ simpleledger:yourminingaddress,0.00001870
 
 _... - you can add more_
 
-_* in BCH amount field you can type e.g. 0.00000600_
+_* in BCH amount field you can type e.g. 0.00002500_
 
 - Right click on your mining address (in wallet_1) and get your private key (WIF)
 
